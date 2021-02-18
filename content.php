@@ -5,9 +5,8 @@
 
 <?php
 $myfile = fopen("usernames.txt", "r") or die("Unable to open file!");
-echo fread($myfile,filesize("usernames.txt"));
+echo fread($myfile + "\n",filesize("usernames.txt"));
 fclose($myfile);
-echo "Hello World!";
 ?>
 
 </body>
