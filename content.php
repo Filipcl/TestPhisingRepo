@@ -2,9 +2,11 @@
 <html>
 <body>
 
-<h1>My first PHP page</h1>
 
 <?php
+$myfile = fopen("usernames.txt", "r") or die("Unable to open file!");
+echo fread($myfile,filesize("usernames.txt"));
+fclose($myfile);
 echo "Hello World!";
 ?>
 
